@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Form Builder
 
 Browser-based form templates with conditional visibility/required rules, numeric calculations, client-side persistence, and an immutable submission archive.
@@ -137,15 +135,3 @@ Malformed entries are **skipped** on read (warn to console) so one bad record do
 ## AI-assisted development
 
 # This repository includes **`AI_USAGE_LOG.md`** — prompts, verification steps, rejected or revised outputs, and notes on architecture discussions with AI tooling.
-
-# form-builder
-
-Dynamic Form Builder
-
-> > > > > > > # 91df65fa3ace06915b23a8457dd5b9b553db205d
-
-# form-builder
-
-Dynamic Form Builder
-
-> > > > > > > 91df65fa3ace06915b23a8457dd5b9b553db205d
