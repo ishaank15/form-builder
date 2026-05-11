@@ -132,6 +132,27 @@ Malformed entries are **skipped** on read (warn to console) so one bad record do
 
 ---
 
+## Deploy (static hosting)
+
+This app is a **Vite SPA** (`npm run build` → `dist/`). Connect your Git repo and use:
+
+| Setting | Value |
+|---------|--------|
+| Build command | `npm run build` |
+| Publish directory | `dist` |
+| Node | 18.x or 20.x |
+
+**SPA routing:** Deep links and refresh must fall back to `index.html`. This repo includes:
+
+- **`public/_redirects`** — copied into `dist/` for **Netlify** and **Cloudflare Pages** (`/* → /index.html` with 200).
+- **`vercel.json`** — rewrites for **Vercel**.
+
+**Free hosts that fit well:** [Vercel](https://vercel.com), [Netlify](https://netlify.com), [Cloudflare Pages](https://pages.cloudflare.com) — import GitHub repo, set build/output above, deploy.
+
+**Note:** Data lives in **browser localStorage** per **origin**. Deployed URL ≠ `localhost`; users start with empty storage unless you add export/import or a backend later.
+
+---
+
 ## AI-assisted development
 
 This repository includes **`AI_USAGE_LOG.md`** — prompts, verification steps, rejected or revised outputs, and notes on architecture discussions with AI tooling.
