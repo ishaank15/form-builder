@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: theme('fontFamily.sans');
+}
+
+/* Print styles consumed by the PDF export pipeline. */
+@media print {
+  body {
+    background: white;
+  }
+  .print\:hidden,
+  [data-print="hide"] {
+    display: none !important;
+  }
+  [data-print-page] {
+    page-break-after: always;
+  }
+  [data-field],
+  [data-section] {
+    break-inside: avoid;
+  }
+}
