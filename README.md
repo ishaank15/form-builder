@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # Form Builder
 
 Browser-based form templates with conditional visibility/required rules, numeric calculations, client-side persistence, and an immutable submission archive.
@@ -21,14 +23,14 @@ Then open the URL Vite prints (usually `http://localhost:5173`).
 
 ### Other commands
 
-| Command | Purpose |
-|--------|---------|
-| `npm run build` | Typecheck (`tsc -b`) + production bundle (`vite build`). |
-| `npm run preview` | Serve the production build locally. |
-| `npm run lint` | ESLint with architectural boundary rules. |
-| `npm run typecheck` | TypeScript only (`tsc --noEmit`). |
-| `npm run test` | Vitest once (`vitest run`). |
-| `npm run test:watch` | Vitest watch mode. |
+| Command              | Purpose                                                  |
+| -------------------- | -------------------------------------------------------- |
+| `npm run build`      | Typecheck (`tsc -b`) + production bundle (`vite build`). |
+| `npm run preview`    | Serve the production build locally.                      |
+| `npm run lint`       | ESLint with architectural boundary rules.                |
+| `npm run typecheck`  | TypeScript only (`tsc --noEmit`).                        |
+| `npm run test`       | Vitest once (`vitest run`).                              |
+| `npm run test:watch` | Vitest watch mode.                                       |
 
 ---
 
@@ -73,10 +75,10 @@ Every stored value is JSON wrapping:
 
 ### Payload contents
 
-| Key | `payload` structure |
-|-----|---------------------|
-| `templates` | `Record<string, FormDefinition>` — keyed by template id. |
-| `submissions` | `Record<string, Submission>` — keyed by submission id. |
+| Key           | `payload` structure                                      |
+| ------------- | -------------------------------------------------------- |
+| `templates`   | `Record<string, FormDefinition>` — keyed by template id. |
+| `submissions` | `Record<string, Submission>` — keyed by submission id.   |
 
 Malformed entries are **skipped** on read (warn to console) so one bad record does not wipe the entire list.
 
@@ -92,14 +94,14 @@ Malformed entries are **skipped** on read (warn to console) so one bad record do
 
 ### Layering: domain ↔ platform ↔ services (and the rest)
 
-| Layer | Responsibility |
-|-------|----------------|
-| **Domain** | Serializable models (`FormDefinition`, `Submission`), pure factories, cross-field **invariants**, parse helpers (`parseFormDefinition`, `parseSubmission`). No React. |
-| **Platform** | **Engines** (conditions, calculations, validation), **field plugin registry**, **persistence adapter**. Reusable across features. |
-| **Services** | CRUD over templates/submissions using persistence + domain parsers. |
-| **Features** | Product flows (builder, filler, dashboard): UI + thin stores/hooks. |
-| **App** | Router, loaders, error boundaries. |
-| **Shared** | Design-system primitives and tiny helpers. |
+| Layer        | Responsibility                                                                                                                                                        |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Domain**   | Serializable models (`FormDefinition`, `Submission`), pure factories, cross-field **invariants**, parse helpers (`parseFormDefinition`, `parseSubmission`). No React. |
+| **Platform** | **Engines** (conditions, calculations, validation), **field plugin registry**, **persistence adapter**. Reusable across features.                                     |
+| **Services** | CRUD over templates/submissions using persistence + domain parsers.                                                                                                   |
+| **Features** | Product flows (builder, filler, dashboard): UI + thin stores/hooks.                                                                                                   |
+| **App**      | Router, loaders, error boundaries.                                                                                                                                    |
+| **Shared**   | Design-system primitives and tiny helpers.                                                                                                                            |
 
 **Trade-off:** More folders upfront vs a faster “everything in components” spike. **Benefit:** Logic is unit-testable, field types scale via **plugins** instead of growing switch statements, and **eslint-plugin-boundaries** enforces allowed imports.
 
@@ -134,4 +136,16 @@ Malformed entries are **skipped** on read (warn to console) so one bad record do
 
 ## AI-assisted development
 
-This repository includes **`AI_USAGE_LOG.md`** — prompts, verification steps, rejected or revised outputs, and notes on architecture discussions with AI tooling.
+# This repository includes **`AI_USAGE_LOG.md`** — prompts, verification steps, rejected or revised outputs, and notes on architecture discussions with AI tooling.
+
+# form-builder
+
+Dynamic Form Builder
+
+> > > > > > > # 91df65fa3ace06915b23a8457dd5b9b553db205d
+
+# form-builder
+
+Dynamic Form Builder
+
+> > > > > > > 91df65fa3ace06915b23a8457dd5b9b553db205d
